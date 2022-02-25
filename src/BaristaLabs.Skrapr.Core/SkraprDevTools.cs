@@ -550,7 +550,7 @@ new Promise(function (resolve, reject) {{
             Session.Subscribe<Network.ResponseReceivedEvent>(ProcessResponseReceivedEvent);
 
             //TODO: Don't sequentially await these.
-            await Session.Emulation.ResetViewport(new Emulation.ResetViewportCommand());
+            //await Session.Emulation.ResetViewport(new Emulation.ResetViewportCommand());
             await Session.Emulation.ResetPageScaleFactor(new Emulation.ResetPageScaleFactorCommand());
             await Session.SendCommand(new Page.EnableCommand());
             var resourceTree = await Session.Page.GetResourceTree();
